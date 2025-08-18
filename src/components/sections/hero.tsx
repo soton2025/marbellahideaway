@@ -48,9 +48,18 @@ export function Hero({ onBookingClick }: HeroProps) {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Video Background */}
+      {/* Background Image/Video */}
       <div className="absolute inset-0 z-0">
         <motion.div style={{ y, opacity }} className="relative h-full w-full">
+          {/* Fallback background image */}
+          <div 
+            className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: 'url("/images/gallery/terracotta-terrace-lounge.jpg")'
+            }}
+          />
+          
+          {/* Video overlay (hidden until video loads) */}
           <video
             ref={videoRef}
             autoPlay
@@ -59,24 +68,23 @@ export function Hero({ onBookingClick }: HeroProps) {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
             onLoadedData={() => setIsVideoLoaded(true)}
+            style={{ opacity: 0 }}
+            onCanPlay={(e) => {
+              const video = e.target as HTMLVideoElement;
+              video.style.opacity = '1';
+            }}
           >
             <source src="/videos/lagoon-pool.mp4" type="video/mp4" />
-            {/* Fallback image */}
-            <img
-              src="/images/gallery/terracotta-terrace-lounge.jpg"
-              alt="Marbella Hideaway terracotta terrace"
-              className="w-full h-full object-cover"
-            />
           </video>
           
-          {/* Video overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
+          {/* Orange-tinted overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-orange-900/20 to-black/30" />
           
-          {/* Subtle texture overlay */}
+          {/* Subtle warm texture overlay */}
           <div 
-            className="absolute inset-0 opacity-30 mix-blend-soft-light"
+            className="absolute inset-0 opacity-20 mix-blend-soft-light"
             style={{
-              backgroundImage: 'url(\"data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23B85450\" fill-opacity=\"0.1\"%3E%3Cpath d=\"m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")'
+              backgroundImage: 'url(\"data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23f97316\" fill-opacity=\"0.1\"%3E%3Cpath d=\"m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")'
             }}
           />
         </motion.div>
@@ -156,7 +164,7 @@ export function Hero({ onBookingClick }: HeroProps) {
             >
               <h1 className="text-5xl lg:text-7xl font-canela font-light mb-6 leading-tight">
                 Marbella&apos;s Most
-                <span className="block text-lagoon-teal-light italic">
+                <span className="block text-orange-300 italic">
                   Private Hideaway
                 </span>
               </h1>
@@ -171,7 +179,7 @@ export function Hero({ onBookingClick }: HeroProps) {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleWhatsAppClick}
-                  className="bg-terracotta hover:bg-terracotta-dark text-white px-8 py-4 rounded-xl font-medium flex items-center space-x-2 transition-colors shadow-soft"
+                  className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-medium flex items-center space-x-2 transition-colors shadow-soft"
                 >
                   <MessageCircle className="w-5 h-5" />
                   <span>WhatsApp Enquiry</span>
@@ -196,19 +204,19 @@ export function Hero({ onBookingClick }: HeroProps) {
                 className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-white/80"
               >
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-lagoon-teal-light rounded-full"></div>
+                  <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
                   <span>6 Luxury Bedrooms</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-lagoon-teal-light rounded-full"></div>
+                  <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
                   <span>Lagoon Pool</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-lagoon-teal-light rounded-full"></div>
+                  <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
                   <span>5 Min to Puerto Banús</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-lagoon-teal-light rounded-full"></div>
+                  <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
                   <span>Golden Mile Location</span>
                 </div>
               </motion.div>
@@ -226,20 +234,20 @@ export function Hero({ onBookingClick }: HeroProps) {
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center space-x-2">
-                <Instagram className="w-6 h-6 text-terracotta" />
-                <h3 className="text-xl font-canela text-charcoal">@marbellahideaway</h3>
+                <Instagram className="w-6 h-6 text-orange-600" />
+                <h3 className="text-xl font-canela text-stone-800">@marbellahideaway</h3>
               </div>
               <button
                 onClick={() => setShowInstagramFeed(false)}
-                className="text-charcoal hover:text-terracotta transition-colors"
+                className="text-stone-800 hover:text-orange-600 transition-colors"
               >
                 ✕
               </button>
             </div>
             
             <div className="mb-4">
-              <p className="text-sm text-warm-gray mb-2">Follow our journey</p>
-              <div className="text-2xl font-medium text-charcoal">74K followers</div>
+              <p className="text-sm text-stone-500 mb-2">Follow our journey</p>
+              <div className="text-2xl font-medium text-stone-800">74K followers</div>
             </div>
 
             {instagramMedia.length > 0 && (

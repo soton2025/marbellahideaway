@@ -32,7 +32,7 @@ const sourceColors = {
   airbnb: 'bg-red-500',
   instagram: 'bg-gradient-to-r from-purple-500 to-pink-500',
   tiktok: 'bg-black',
-  direct: 'bg-lagoon-teal'
+  direct: 'bg-orange-600'
 }
 
 const travelTypeIcons = {
@@ -275,7 +275,7 @@ export function Reviews() {
             className="text-4xl lg:text-6xl font-canela text-charcoal mb-6"
           >
             Guest
-            <span className="block text-terracotta italic">Stories</span>
+            <span className="block text-orange-400 italic">Stories</span>
           </motion.h2>
           
           <motion.p

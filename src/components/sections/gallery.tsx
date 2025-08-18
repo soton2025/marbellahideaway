@@ -431,7 +431,7 @@ export function Gallery({ showInstagramContent = true }: GalleryProps) {
             className="text-4xl lg:text-6xl font-canela text-charcoal mb-6"
           >
             Visual
-            <span className="block text-terracotta italic">Journey</span>
+            <span className="block text-orange-400 italic">Journey</span>
           </motion.h2>
           
           <motion.p
@@ -459,7 +459,7 @@ export function Gallery({ showInstagramContent = true }: GalleryProps) {
               className={cn(
                 "flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300",
                 selectedCategory === category.id
-                  ? "bg-lagoon-teal text-white shadow-medium"
+                  ? "bg-orange-600 text-white shadow-medium"
                   : "bg-sand text-warm-gray hover:bg-sand-dark"
               )}
             >

@@ -82,7 +82,7 @@ Could you please confirm availability and provide the final quote? Thank you!`
             className="text-4xl lg:text-6xl font-canela text-charcoal mb-6"
           >
             Book Your
-            <span className="block text-lagoon-teal italic">Hideaway</span>
+            <span className="block text-orange-400 italic">Hideaway</span>
           </motion.h2>
           
           <motion.p
@@ -111,10 +111,10 @@ Could you please confirm availability and provide the final quote? Thank you!`
               <div className="space-y-4 mb-6">
                 <button
                   onClick={() => setShowCalendar(true)}
-                  className="w-full p-4 border border-sand rounded-xl text-left hover:border-lagoon-teal transition-colors group"
+                  className="w-full p-4 border border-sand rounded-xl text-left hover:border-orange-600 transition-colors group"
                 >
                   <div className="flex items-center space-x-3">
-                    <CalendarIcon className="w-5 h-5 text-lagoon-teal" />
+                    <CalendarIcon className="w-5 h-5 text-orange-600" />
                     <div>
                       <div className="text-sm text-warm-gray">Dates</div>
                       <div className="font-medium text-charcoal">
@@ -132,7 +132,7 @@ Could you please confirm availability and provide the final quote? Thank you!`
                 <div className="p-4 border border-sand rounded-xl">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <Users className="w-5 h-5 text-lagoon-teal" />
+                      <Users className="w-5 h-5 text-orange-600" />
                       <div>
                         <div className="text-sm text-warm-gray">Guests</div>
                         <div className="font-medium text-charcoal">{guestCount} guests</div>
@@ -141,14 +141,14 @@ Could you please confirm availability and provide the final quote? Thank you!`
                     <div className="flex items-center space-x-2">
                       <button
                         onClick={() => setGuestCount(Math.max(1, guestCount - 1))}
-                        className="w-8 h-8 rounded-full border border-sand hover:border-lagoon-teal flex items-center justify-center transition-colors"
+                        className="w-8 h-8 rounded-full border border-sand hover:border-orange-600 flex items-center justify-center transition-colors"
                       >
                         -
                       </button>
                       <span className="w-8 text-center font-medium">{guestCount}</span>
                       <button
                         onClick={() => setGuestCount(Math.min(12, guestCount + 1))}
-                        className="w-8 h-8 rounded-full border border-sand hover:border-lagoon-teal flex items-center justify-center transition-colors"
+                        className="w-8 h-8 rounded-full border border-sand hover:border-orange-600 flex items-center justify-center transition-colors"
                       >
                         +
                       </button>
@@ -162,7 +162,7 @@ Could you please confirm availability and provide the final quote? Thank you!`
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mb-6 p-4 bg-gradient-to-r from-lagoon-teal/10 to-terracotta/10 rounded-xl"
+                  className="mb-6 p-4 bg-gradient-to-r from-orange-600/10 to-orange-600/10 rounded-xl"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm text-warm-gray">
@@ -186,7 +186,7 @@ Could you please confirm availability and provide the final quote? Thank you!`
                 onClick={handleWhatsAppInquiry}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-terracotta hover:bg-terracotta-dark text-white py-4 px-6 rounded-xl font-medium flex items-center justify-center space-x-2 transition-colors shadow-medium"
+                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-4 px-6 rounded-xl font-medium flex items-center justify-center space-x-2 transition-colors shadow-medium"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>WhatsApp Inquiry</span>
@@ -202,7 +202,7 @@ Could you please confirm availability and provide the final quote? Thank you!`
                 <div className="space-y-2">
                   {inclusions.map((item, index) => (
                     <div key={index} className="flex items-center space-x-3">
-                      <item.icon className="w-4 h-4 text-lagoon-teal" />
+                      <item.icon className="w-4 h-4 text-orange-600" />
                       <span className="text-sm text-warm-gray">{item.text}</span>
                     </div>
                   ))}
@@ -235,7 +235,7 @@ Could you please confirm availability and provide the final quote? Thank you!`
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-lagoon-teal mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <div className="font-medium text-charcoal">Flexible Cancellation</div>
                       <p className="text-sm text-warm-gray">Cancel up to 14 days before check-in for full refund</p>
@@ -243,7 +243,7 @@ Could you please confirm availability and provide the final quote? Thank you!`
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <Clock className="w-5 h-5 text-lagoon-teal mt-0.5 flex-shrink-0" />
+                    <Clock className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <div className="font-medium text-charcoal">Check-in / Check-out</div>
                       <p className="text-sm text-warm-gray">Check-in: 4:00 PM • Check-out: 11:00 AM</p>
@@ -253,7 +253,7 @@ Could you please confirm availability and provide the final quote? Thank you!`
                 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <Users className="w-5 h-5 text-lagoon-teal mt-0.5 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <div className="font-medium text-charcoal">Maximum Occupancy</div>
                       <p className="text-sm text-warm-gray">12 guests maximum • Additional fees may apply</p>
@@ -261,7 +261,7 @@ Could you please confirm availability and provide the final quote? Thank you!`
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <AlertTriangle className="w-5 h-5 text-terracotta mt-0.5 flex-shrink-0" />
+                    <AlertTriangle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <div className="font-medium text-charcoal">Minimum Stay</div>
                       <p className="text-sm text-warm-gray">3-7 nights minimum depending on season</p>

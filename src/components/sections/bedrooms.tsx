@@ -42,21 +42,21 @@ function BedroomCard({ bedroom, index, onImageClick }: BedroomCardProps) {
     switch (id) {
       case 'master-suite':
         return {
-          accent: 'bg-lagoon-teal',
-          light: 'bg-lagoon-teal-light',
-          text: 'text-lagoon-teal-dark'
+          accent: 'bg-orange-600',
+          light: 'bg-orange-400',
+          text: 'text-orange-700'
         }
       case 'lagoon-room':
         return {
-          accent: 'bg-lagoon-teal',
-          light: 'bg-lagoon-teal-light',
-          text: 'text-lagoon-teal-dark'
+          accent: 'bg-orange-600',
+          light: 'bg-orange-400',
+          text: 'text-orange-700'
         }
       case 'terracotta-suite':
         return {
-          accent: 'bg-terracotta',
-          light: 'bg-terracotta-light',
-          text: 'text-terracotta-dark'
+          accent: 'bg-orange-600',
+          light: 'bg-orange-400',
+          text: 'text-orange-700'
         }
       case 'olive-grove-room':
         return {
@@ -72,15 +72,15 @@ function BedroomCard({ bedroom, index, onImageClick }: BedroomCardProps) {
         }
       case 'bohemian-loft':
         return {
-          accent: 'bg-terracotta',
-          light: 'bg-terracotta-light',
-          text: 'text-terracotta-dark'
+          accent: 'bg-orange-600',
+          light: 'bg-orange-400',
+          text: 'text-orange-700'
         }
       default:
         return {
-          accent: 'bg-lagoon-teal',
-          light: 'bg-lagoon-teal-light',
-          text: 'text-lagoon-teal-dark'
+          accent: 'bg-orange-600',
+          light: 'bg-orange-400',
+          text: 'text-orange-700'
         }
     }
   }
@@ -278,7 +278,7 @@ export function Bedrooms({ onRoomClick }: BedroomsProps) {
             className="text-4xl lg:text-6xl font-canela text-charcoal mb-6"
           >
             Six Stunning
-            <span className="block text-lagoon-teal italic">Bedrooms</span>
+            <span className="block text-orange-400 italic">Bedrooms</span>
           </motion.h2>
           
           <motion.p
@@ -317,7 +317,7 @@ export function Bedrooms({ onRoomClick }: BedroomsProps) {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-terracotta hover:bg-terracotta-dark text-white px-8 py-4 rounded-xl font-medium transition-colors shadow-soft"
+            className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-medium transition-colors shadow-soft"
           >
             Book Your Stay
           </motion.button>
