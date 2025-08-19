@@ -70,53 +70,34 @@ export const mockInstagramData: InstagramMedia[] = [
   {
     id: '1',
     media_type: 'IMAGE',
-    media_url: '/images/villa/pool-sunset.jpg',
+    media_url: '/images/gallery/kitchen-interior.jpg',
     permalink: 'https://instagram.com/p/mock1',
-    caption: 'Golden hour at our lagoon pool ✨ #MarbellaHideaway #LuxuryVilla',
+    caption: 'Cooking up memories in our gourmet kitchen 👨‍🍳 #MarbellaHideaway',
     timestamp: new Date().toISOString(),
   },
   {
     id: '2',
-    media_type: 'VIDEO',
-    media_url: '/videos/villa-tour.mp4',
-    thumbnail_url: '/images/villa/bedroom-1.jpg',
+    media_type: 'IMAGE',
+    media_url: '/images/gallery/outdoor-dining-setup.jpg',
     permalink: 'https://instagram.com/p/mock2',
-    caption: 'Take a tour through our bohemian paradise 🏡',
+    caption: 'Al fresco dining under the Spanish sky ✨ #LuxuryVilla',
     timestamp: new Date(Date.now() - 86400000).toISOString(),
   },
   {
     id: '3',
     media_type: 'IMAGE',
-    media_url: '/images/villa/terrace-dining.jpg',
+    media_url: '/images/gallery/villa-entrance-facade.jpg',
     permalink: 'https://instagram.com/p/mock3',
-    caption: 'Terracotta terraces perfect for morning coffee ☕',
+    caption: 'Welcome to your private Mediterranean escape 🏡',
     timestamp: new Date(Date.now() - 172800000).toISOString(),
   },
   {
     id: '4',
-    media_type: 'CAROUSEL_ALBUM',
-    media_url: '/images/villa/bedroom-2.jpg',
+    media_type: 'IMAGE',
+    media_url: '/images/gallery/main-living-room.jpg',
     permalink: 'https://instagram.com/p/mock4',
-    caption: 'Six stunning bedrooms, each with its own character',
+    caption: 'Relaxing in luxury at Marbella Hideaway 🛋️',
     timestamp: new Date(Date.now() - 259200000).toISOString(),
-    children: {
-      data: [
-        {
-          id: '4a',
-          media_type: 'IMAGE',
-          media_url: '/images/villa/bedroom-2.jpg',
-          permalink: '',
-          timestamp: new Date(Date.now() - 259200000).toISOString(),
-        },
-        {
-          id: '4b',
-          media_type: 'IMAGE',
-          media_url: '/images/villa/bedroom-3.jpg',
-          permalink: '',
-          timestamp: new Date(Date.now() - 259200000).toISOString(),
-        }
-      ]
-    }
   }
 ]
 
