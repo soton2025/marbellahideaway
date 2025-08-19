@@ -37,7 +37,7 @@ export const bedrooms: Bedroom[] = [
     images: [
       '/images/gallery/bedroom-master-suite.jpg',
       '/images/gallery/bedroom-terrace-view.jpg',
-      '/images/bedrooms/master-suite-bath.jpg'
+      '/images/gallery/villa-exterior-terraces.jpg'
     ],
     instagramPostId: '1'
   },
@@ -64,9 +64,9 @@ export const bedrooms: Bedroom[] = [
       'Hair dryer'
     ],
     images: [
-      '/images/bedrooms/lagoon-room-1.jpg',
-      '/images/bedrooms/lagoon-room-2.jpg',
-      '/images/bedrooms/lagoon-room-patio.jpg'
+      '/images/gallery/pool-lagoon-area.jpg',
+      '/images/gallery/pool-terrace-seating.jpg',
+      '/images/gallery/outdoor-dining-setup.jpg'
     ],
     instagramPostId: '2'
   },
@@ -94,8 +94,8 @@ export const bedrooms: Bedroom[] = [
     ],
     images: [
       '/images/gallery/bedroom-terracotta-suite.jpg',
-      '/images/gallery/bedroom-bohemian-loft.jpg',
-      '/images/bedrooms/terracotta-courtyard.jpg'
+      '/images/gallery/terracotta-terrace-lounge.jpg',
+      '/images/gallery/covered-terrace-champagne.jpg'
     ],
     instagramPostId: '3'
   },
@@ -122,9 +122,9 @@ export const bedrooms: Bedroom[] = [
       'Eco-friendly amenities'
     ],
     images: [
-      '/images/bedrooms/olive-grove-1.jpg',
-      '/images/bedrooms/olive-grove-2.jpg',
-      '/images/bedrooms/olive-grove-garden.jpg'
+      '/images/gallery/exterior-garden-view.jpg',
+      '/images/gallery/villa-entrance-facade.jpg',
+      '/images/gallery/terrace-dining-champagne.jpg'
     ],
     instagramPostId: '4'
   },
@@ -151,9 +151,9 @@ export const bedrooms: Bedroom[] = [
       'Seaside-inspired toiletries'
     ],
     images: [
-      '/images/bedrooms/sand-dune-1.jpg',
-      '/images/bedrooms/sand-dune-2.jpg',
-      '/images/bedrooms/sand-dune-balcony.jpg'
+      '/images/gallery/bedroom-spa-suite.jpg',
+      '/images/gallery/living-area-interior.jpg',
+      '/images/gallery/main-living-room.jpg'
     ]
   },
   {
@@ -179,9 +179,9 @@ export const bedrooms: Bedroom[] = [
       'Boho-chic amenities'
     ],
     images: [
-      '/images/gallery/bedroom-spa-suite.jpg',
-      '/images/bedrooms/bohemian-loft-2.jpg',
-      '/images/bedrooms/bohemian-loft-terrace.jpg'
+      '/images/gallery/bedroom-bohemian-loft.jpg',
+      '/images/gallery/kitchen-interior.jpg',
+      '/images/gallery/pool-area-loungers.jpg'
     ]
   }
 ]

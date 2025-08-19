@@ -117,19 +117,19 @@ export function Footer() {
         <div className="border-t border-white/20 pt-8 mb-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-2xl font-canela text-lagoon-teal mb-1">#1</div>
-              <div className="text-sm text-warm-white/80">on TripAdvisor</div>
+              <div className="text-2xl font-canela text-orange-400 mb-1">#1</div>
+              <div className="text-sm text-warm-white/80">Villa Rental</div>
             </div>
             <div>
-              <div className="text-2xl font-canela text-lagoon-teal mb-1">74K</div>
+              <div className="text-2xl font-canela text-orange-400 mb-1">74K</div>
               <div className="text-sm text-warm-white/80">Instagram Followers</div>
             </div>
             <div>
-              <div className="text-2xl font-canela text-lagoon-teal mb-1">5★</div>
+              <div className="text-2xl font-canela text-orange-400 mb-1">4.8★</div>
               <div className="text-sm text-warm-white/80">Average Rating</div>
             </div>
             <div>
-              <div className="text-2xl font-canela text-lagoon-teal mb-1">152</div>
+              <div className="text-2xl font-canela text-orange-400 mb-1">47</div>
               <div className="text-sm text-warm-white/80">Reviews</div>
             </div>
           </div>

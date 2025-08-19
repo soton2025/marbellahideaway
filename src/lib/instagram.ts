@@ -57,10 +57,10 @@ export class InstagramAPI {
     })
   }
 
-  async getHashtagMedia(_hashtag: string): Promise<InstagramApiResponse<InstagramMedia>> {
+  async getHashtagMedia(hashtag: string): Promise<InstagramApiResponse<InstagramMedia>> {
     // Note: This requires Instagram Basic Display API and additional permissions
     // For now, we'll return mock data or implement when permissions are available
-    console.warn('Hashtag media requires additional Instagram permissions')
+    console.warn(`Hashtag media for ${hashtag} requires additional Instagram permissions`)
     return { data: [] }
   }
 }

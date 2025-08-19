@@ -12,7 +12,11 @@ import {
   Wifi,
   Car,
   Utensils,
-  Shield
+  Shield,
+  ChefHat,
+  Plane,
+  Wine,
+  Anchor
 } from 'lucide-react'
 import { Calendar } from '@/components/ui/calendar'
 import { generateWhatsAppUrl, formatDate } from '@/lib/utils'
@@ -223,6 +227,60 @@ Could you please confirm availability and provide the final quote? Thank you!`
               className="h-fit"
             />
 
+            {/* Extras & Services */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="mt-8 bg-white rounded-2xl p-6 shadow-soft"
+            >
+              <h3 className="text-xl font-canela text-charcoal mb-6">Extras & Services</h3>
+              <p className="text-sm text-warm-gray mb-6">
+                Enhance your stay with our premium services. All extras can be arranged upon request.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex items-start space-x-3 p-3 bg-orange-50 rounded-lg">
+                  <ChefHat className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="font-medium text-charcoal">Private Chef</div>
+                    <p className="text-sm text-warm-gray">Personal chef for authentic Spanish cuisine</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3 p-3 bg-orange-50 rounded-lg">
+                  <Plane className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="font-medium text-charcoal">Airport Transfer</div>
+                    <p className="text-sm text-warm-gray">Luxury transport to/from Málaga Airport</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3 p-3 bg-orange-50 rounded-lg">
+                  <Wine className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="font-medium text-charcoal">Cocktail Experience</div>
+                    <p className="text-sm text-warm-gray">Private mixology sessions and tastings</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3 p-3 bg-orange-50 rounded-lg">
+                  <Anchor className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="font-medium text-charcoal">Yacht Charter</div>
+                    <p className="text-sm text-warm-gray">Luxury boat rentals from Puerto Banús</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-6 p-4 bg-sand-200 rounded-lg">
+                <p className="text-sm text-charcoal">
+                  <strong>Contact us</strong> to customize your experience with additional services like housekeeping, 
+                  spa treatments, golf arrangements, and exclusive dining reservations.
+                </p>
+              </div>
+            </motion.div>
+
             {/* Booking Policies */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -237,8 +295,8 @@ Could you please confirm availability and provide the final quote? Thank you!`
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
                     <div>
-                      <div className="font-medium text-charcoal">Flexible Cancellation</div>
-                      <p className="text-sm text-warm-gray">Cancel up to 14 days before check-in for full refund</p>
+                      <div className="font-medium text-charcoal">Instant Confirmation</div>
+                      <p className="text-sm text-warm-gray">Receive booking confirmation within 24 hours</p>
                     </div>
                   </div>
                   

@@ -83,21 +83,13 @@ function ReviewCard({ review, index }: ReviewCardProps) {
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center space-x-4">
           <div className="relative">
-            {review.avatar ? (
-              <img
-                src={review.avatar}
-                alt={review.name}
-                className="w-12 h-12 rounded-full object-cover"
-              />
-            ) : (
-              <div className="w-12 h-12 rounded-full bg-lagoon-teal/20 flex items-center justify-center">
-                <span className="text-lagoon-teal font-medium text-sm">
-                  {review.name.charAt(0)}
-                </span>
-              </div>
-            )}
+            <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center">
+              <span className="text-orange-600 font-medium text-sm">
+                {review.name.charAt(0)}
+              </span>
+            </div>
             {review.verified && (
-              <div className="absolute -bottom-1 -right-1 bg-lagoon-teal rounded-full p-1">
+              <div className="absolute -bottom-1 -right-1 bg-orange-600 rounded-full p-1">
                 <Shield className="w-3 h-3 text-white" />
               </div>
             )}

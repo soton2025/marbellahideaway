@@ -323,8 +323,6 @@ export function Gallery({ showInstagramContent = true }: GalleryProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [lightboxIndex, setLightboxIndex] = useState(0)
   const [isLightboxOpen, setIsLightboxOpen] = useState(false)
-  const [instagramMedia, setInstagramMedia] = useState<InstagramMedia[]>([])
-  
   const sectionRef = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
   const isInView = useInView(titleRef, { once: true, margin: "-100px" })
@@ -351,7 +349,6 @@ export function Gallery({ showInstagramContent = true }: GalleryProps) {
       if (showInstagramContent) {
         try {
           const media = await getInstagramContent(true)
-          setInstagramMedia(media)
           
           instagramItems = media.map((item, index) => ({
             id: `instagram-${item.id}`,
@@ -430,8 +427,8 @@ export function Gallery({ showInstagramContent = true }: GalleryProps) {
             transition={{ duration: 0.6 }}
             className="text-4xl lg:text-6xl font-canela text-charcoal mb-6"
           >
-            Visual
-            <span className="block text-orange-400 italic">Journey</span>
+            Villa
+            <span className="block text-orange-400 italic">Gallery</span>
           </motion.h2>
           
           <motion.p
@@ -440,8 +437,8 @@ export function Gallery({ showInstagramContent = true }: GalleryProps) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-warm-gray max-w-2xl mx-auto mb-8"
           >
-            Discover every corner of our bohemian paradise through our curated gallery 
-            and live Instagram moments from our guests.
+            Experience the beauty of our luxury villa through stunning photography
+            showcasing every detail of your perfect hideaway.
           </motion.p>
         </div>
 
@@ -527,52 +524,65 @@ export function Gallery({ showInstagramContent = true }: GalleryProps) {
           ))}
         </motion.div>
 
-        {/* Social Media CTAs */}
-        {showInstagramContent && instagramMedia.length > 0 && (
+        {/* Social Media Embeds */}
+        {showInstagramContent && (
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 1 }}
-            className="text-center mt-16"
+            className="mt-16"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Instagram CTA */}
-              <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-8 text-white">
-                <Instagram className="w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-canela mb-4">Instagram Stories</h3>
-                <p className="mb-6 opacity-90">
-                  Join 74K followers for daily inspiration from our hideaway
-                </p>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-canela text-charcoal mb-4">Follow Our Journey</h3>
+              <p className="text-warm-gray">See real moments from our guests and get inspired for your stay</p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Instagram Embed */}
+              <div className="bg-white rounded-2xl p-6 shadow-soft">
+                <div className="flex items-center mb-4">
+                  <Instagram className="w-6 h-6 text-orange-600 mr-2" />
+                  <h4 className="text-lg font-medium text-charcoal">Instagram Feed</h4>
+                </div>
+                <div className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                  <div className="text-center text-gray-500">
+                    <Instagram className="w-12 h-12 mx-auto mb-2" />
+                    <p className="text-sm">Latest Instagram Posts</p>
+                    <p className="text-xs">74K followers @marbellahideaway</p>
+                  </div>
+                </div>
                 <motion.a
                   href="https://instagram.com/marbellahideaway"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center space-x-2 bg-white text-charcoal px-6 py-3 rounded-xl font-medium hover:bg-white/90 transition-colors"
+                  whileHover={{ scale: 1.02 }}
+                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-4 rounded-xl font-medium text-center block transition-transform"
                 >
-                  <Instagram className="w-5 h-5" />
-                  <span>@marbellahideaway</span>
+                  View on Instagram
                 </motion.a>
               </div>
 
-              {/* TikTok CTA */}
-              <div className="bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 text-white">
-                <TikTokIcon className="w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-canela mb-4">TikTok Videos</h3>
-                <p className="mb-6 opacity-90">
-                  Watch behind-the-scenes moments and villa tours
-                </p>
+              {/* TikTok Embed */}
+              <div className="bg-white rounded-2xl p-6 shadow-soft">
+                <div className="flex items-center mb-4">
+                  <TikTokIcon className="w-6 h-6 text-black mr-2" />
+                  <h4 className="text-lg font-medium text-charcoal">TikTok Videos</h4>
+                </div>
+                <div className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                  <div className="text-center text-gray-500">
+                    <TikTokIcon className="w-12 h-12 mx-auto mb-2" />
+                    <p className="text-sm">Villa Tour Videos</p>
+                    <p className="text-xs">@marbellahideaway</p>
+                  </div>
+                </div>
                 <motion.a
                   href="https://www.tiktok.com/@marbellahideaway"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center space-x-2 bg-white text-charcoal px-6 py-3 rounded-xl font-medium hover:bg-white/90 transition-colors"
+                  whileHover={{ scale: 1.02 }}
+                  className="w-full bg-black text-white py-3 px-4 rounded-xl font-medium text-center block transition-transform"
                 >
-                  <TikTokIcon className="w-5 h-5" />
-                  <span>@marbellahideaway</span>
+                  Watch on TikTok
                 </motion.a>
               </div>
             </div>

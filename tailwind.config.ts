@@ -38,6 +38,15 @@ const config: Config = {
           900: '#7c2d12',
         },
         
+        // Brand Colors (replacing old undefined colors)
+        'lagoon-teal': '#f97316', // Using brand orange instead
+        'lagoon-teal-dark': '#ea580c',
+        terracotta: '#ea580c',
+        'terracotta-dark': '#c2410c',
+        charcoal: '#1c1917',
+        'warm-gray': '#78716c',
+        'warm-white': '#fffef9',
+        
         // Complementary Warm Palette
         sand: {
           50: '#fefdf8',
