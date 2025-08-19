@@ -25,7 +25,7 @@ export default function Home() {
       <div id="content" />
       
       {/* Gallery Section */}
-      <Gallery showInstagramContent={true} />
+      <Gallery showInstagramContent={false} />
       
       {/* Booking Section */}
       <Booking onWhatsAppInquiry={handleWhatsAppInquiry} />
