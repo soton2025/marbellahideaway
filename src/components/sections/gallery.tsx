@@ -31,30 +31,6 @@ interface GalleryItem {
 
 const professionalPhotos: Omit<GalleryItem, 'type'>[] = [
   {
-    id: 'terracotta-terrace-main',
-    src: '/images/gallery/terracotta-terrace-lounge.jpg',
-    alt: 'Main terracotta terrace with luxury outdoor furniture',
-    caption: 'The heart of our villa - terracotta terraces with premium outdoor lounge furniture',
-    category: 'exterior',
-    aspectRatio: 'landscape'
-  },
-  {
-    id: 'master-bedroom-terrace',
-    src: '/images/gallery/bedroom-terrace-view.jpg',
-    alt: 'Master bedroom with terrace access and lounge chair',
-    caption: 'Wake up to Mediterranean views from the master suite',
-    category: 'bedroom',
-    aspectRatio: 'landscape'
-  },
-  {
-    id: 'lagoon-pool-area',
-    src: '/images/gallery/pool-lagoon-area.jpg',
-    alt: 'Lagoon pool with natural stone surroundings',
-    caption: 'Our signature lagoon pool - a tropical oasis in Marbella',
-    category: 'pool',
-    aspectRatio: 'square'
-  },
-  {
     id: 'pool-lounging-area',
     src: '/images/gallery/pool-area-loungers.jpg',
     alt: 'Pool area with luxury sun loungers and umbrellas',
@@ -101,14 +77,6 @@ const professionalPhotos: Omit<GalleryItem, 'type'>[] = [
     caption: 'Welcome to your private Marbella hideaway',
     category: 'exterior',
     aspectRatio: 'square'
-  },
-  {
-    id: 'master-suite-marble',
-    src: '/images/gallery/bedroom-master-suite.jpg',
-    alt: 'Master suite with continental marble floors',
-    caption: 'Continental marble floors and elegant furnishing in the master suite',
-    category: 'bedroom',
-    aspectRatio: 'landscape'
   },
   {
     id: 'main-living-room',
