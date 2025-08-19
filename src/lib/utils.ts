@@ -21,7 +21,7 @@ export function formatDate(date: Date): string {
   }).format(date)
 }
 
-export function generateWhatsAppUrl(message: string, phoneNumber: string = "34600000000"): string {
+export function generateWhatsAppUrl(message: string, phoneNumber: string = "34672249724"): string {
   const encodedMessage = encodeURIComponent(message)
   return `https://wa.me/${phoneNumber}?text=${encodedMessage}`
 }

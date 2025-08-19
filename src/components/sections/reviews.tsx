@@ -355,7 +355,7 @@ export function Reviews() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-terracotta hover:bg-terracotta-dark text-white px-8 py-4 rounded-xl font-medium transition-colors shadow-medium"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-medium transition-colors shadow-medium"
               >
                 Book Your Stay
               </motion.button>
@@ -366,7 +366,7 @@ export function Reviews() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white border border-sand hover:border-lagoon-teal text-charcoal px-8 py-4 rounded-xl font-medium transition-colors flex items-center justify-center space-x-2"
+                className="bg-white border border-orange-200 hover:border-orange-400 text-charcoal px-8 py-4 rounded-xl font-medium transition-colors flex items-center justify-center space-x-2"
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Read All Reviews</span>

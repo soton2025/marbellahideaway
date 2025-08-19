@@ -65,39 +65,23 @@ export class InstagramAPI {
   }
 }
 
-// Mock data for development/demo purposes
+// Mock data for development/demo purposes (using different images to avoid conflicts)
 export const mockInstagramData: InstagramMedia[] = [
   {
     id: '1',
     media_type: 'IMAGE',
-    media_url: '/images/gallery/kitchen-interior.jpg',
+    media_url: '/images/gallery/outdoor-dining-setup.jpg',
     permalink: 'https://instagram.com/p/mock1',
-    caption: 'Cooking up memories in our gourmet kitchen 👨‍🍳 #MarbellaHideaway',
+    caption: 'Al fresco dining under the Spanish sky ✨ #MarbellaHideaway',
     timestamp: new Date().toISOString(),
   },
   {
     id: '2',
-    media_type: 'IMAGE',
-    media_url: '/images/gallery/outdoor-dining-setup.jpg',
-    permalink: 'https://instagram.com/p/mock2',
-    caption: 'Al fresco dining under the Spanish sky ✨ #LuxuryVilla',
-    timestamp: new Date(Date.now() - 86400000).toISOString(),
-  },
-  {
-    id: '3',
-    media_type: 'IMAGE',
+    media_type: 'IMAGE', 
     media_url: '/images/gallery/villa-entrance-facade.jpg',
-    permalink: 'https://instagram.com/p/mock3',
-    caption: 'Welcome to your private Mediterranean escape 🏡',
-    timestamp: new Date(Date.now() - 172800000).toISOString(),
-  },
-  {
-    id: '4',
-    media_type: 'IMAGE',
-    media_url: '/images/gallery/main-living-room.jpg',
-    permalink: 'https://instagram.com/p/mock4',
-    caption: 'Relaxing in luxury at Marbella Hideaway 🛋️',
-    timestamp: new Date(Date.now() - 259200000).toISOString(),
+    permalink: 'https://instagram.com/p/mock2',
+    caption: 'Welcome to your private Mediterranean escape 🏡 #LuxuryVilla',
+    timestamp: new Date(Date.now() - 86400000).toISOString(),
   }
 ]
 

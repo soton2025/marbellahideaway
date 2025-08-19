@@ -47,14 +47,6 @@ const professionalPhotos: Omit<GalleryItem, 'type'>[] = [
     aspectRatio: 'landscape'
   },
   {
-    id: 'outdoor-dining-setup',
-    src: '/images/gallery/outdoor-dining-setup.jpg',
-    alt: 'Elegant outdoor dining setup',
-    caption: 'Al fresco dining perfection under the Andalusian sky',
-    category: 'dining',
-    aspectRatio: 'landscape'
-  },
-  {
     id: 'gourmet-kitchen',
     src: '/images/gallery/kitchen-interior.jpg',
     alt: 'Fully equipped gourmet kitchen',
@@ -63,36 +55,12 @@ const professionalPhotos: Omit<GalleryItem, 'type'>[] = [
     aspectRatio: 'landscape'
   },
   {
-    id: 'living-area',
-    src: '/images/gallery/living-area-interior.jpg',
-    alt: 'Comfortable living area with modern furnishings',
-    caption: 'Elegant living spaces designed for relaxation and socializing',
-    category: 'amenities',
-    aspectRatio: 'portrait'
-  },
-  {
-    id: 'villa-entrance',
-    src: '/images/gallery/villa-entrance-facade.jpg',
-    alt: 'Villa entrance and facade',
-    caption: 'Welcome to your private Marbella hideaway',
-    category: 'exterior',
-    aspectRatio: 'square'
-  },
-  {
     id: 'main-living-room',
     src: '/images/gallery/main-living-room.jpg',
     alt: 'Main living room with exposed wooden beams and fireplace',
     caption: 'Spectacular living room with exposed beams, fireplace, and marble floors',
     category: 'amenities',
     aspectRatio: 'landscape'
-  },
-  {
-    id: 'covered-terrace-service',
-    src: '/images/gallery/covered-terrace-champagne.jpg',
-    alt: 'Covered terrace with premium champagne service',
-    caption: 'Premium champagne service on our elegant covered terrace',
-    category: 'dining',
-    aspectRatio: 'square'
   }
 ]
 
