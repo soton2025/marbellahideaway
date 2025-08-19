@@ -150,10 +150,10 @@ export function Calendar({ onDateSelect, className }: CalendarProps) {
             status.isPast && "opacity-40 cursor-not-allowed",
             !status.available && !status.isPast && "opacity-60 cursor-not-allowed",
             status.available && !status.isPast && "hover:shadow-medium",
-            status.inRange && "bg-lagoon-teal/20",
-            status.isStart && "bg-lagoon-teal text-white shadow-medium",
-            status.isEnd && "bg-lagoon-teal text-white shadow-medium",
-            status.isToday && !status.isStart && !status.isEnd && "ring-2 ring-lagoon-teal ring-offset-2"
+            status.inRange && "bg-orange-100",
+            status.isStart && "bg-orange-600 text-white shadow-medium",
+            status.isEnd && "bg-orange-600 text-white shadow-medium",
+            status.isToday && !status.isStart && !status.isEnd && "ring-2 ring-orange-400 ring-offset-2"
           )}
           onClick={() => handleDateClick(day)}
           onMouseEnter={() => selectedStartDate && !selectedEndDate && setHoveredDate(new Date(year, month - 1, day))}
@@ -180,7 +180,7 @@ export function Calendar({ onDateSelect, className }: CalendarProps) {
                     season?.color + '40' 
                 }}
               >
-                €{Math.round(status.price / 100)}
+                €{Math.round(status.price)}
               </div>
             </div>
           )}

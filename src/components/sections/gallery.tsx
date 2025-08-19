@@ -47,30 +47,6 @@ const professionalPhotos: Omit<GalleryItem, 'type'>[] = [
     aspectRatio: 'landscape'
   },
   {
-    id: 'covered-terrace-dining',
-    src: '/images/gallery/terrace-dining-champagne.jpg',
-    alt: 'Covered terrace with champagne service and pool view',
-    caption: 'Champagne moments on our covered terrace overlooking the lagoon pool',
-    category: 'dining',
-    aspectRatio: 'portrait'
-  },
-  {
-    id: 'bohemian-bedroom',
-    src: '/images/gallery/bedroom-bohemian-loft.jpg',
-    alt: 'Bohemian bedroom with decorative elements and natural textures',
-    caption: 'Bohemian elegance with handcrafted details and natural textures',
-    category: 'bedroom',
-    aspectRatio: 'portrait'
-  },
-  {
-    id: 'spa-suite-twins',
-    src: '/images/gallery/bedroom-spa-suite.jpg',
-    alt: 'Spa suite with twin beds and marble floors',
-    caption: 'The spa suite featuring twin beds and our signature marble floors',
-    category: 'bedroom',
-    aspectRatio: 'landscape'
-  },
-  {
     id: 'lagoon-pool-area',
     src: '/images/gallery/pool-lagoon-area.jpg',
     alt: 'Lagoon pool with natural stone surroundings',
@@ -93,22 +69,6 @@ const professionalPhotos: Omit<GalleryItem, 'type'>[] = [
     caption: 'Mediterranean architecture with cascading terrace levels',
     category: 'exterior',
     aspectRatio: 'landscape'
-  },
-  {
-    id: 'pool-terrace-seating',
-    src: '/images/gallery/pool-terrace-seating.jpg',
-    alt: 'Pool terrace with elegant outdoor seating arrangement',
-    caption: 'Sophisticated outdoor seating with pool and garden views',
-    category: 'pool',
-    aspectRatio: 'square'
-  },
-  {
-    id: 'garden-villa-view',
-    src: '/images/gallery/exterior-garden-view.jpg',
-    alt: 'Garden view of the villa exterior',
-    caption: 'Lush gardens surrounding our private Mediterranean hideaway',
-    category: 'exterior',
-    aspectRatio: 'portrait'
   },
   {
     id: 'outdoor-dining-setup',
@@ -149,14 +109,6 @@ const professionalPhotos: Omit<GalleryItem, 'type'>[] = [
     caption: 'Continental marble floors and elegant furnishing in the master suite',
     category: 'bedroom',
     aspectRatio: 'landscape'
-  },
-  {
-    id: 'terracotta-suite-bedroom',
-    src: '/images/gallery/bedroom-terracotta-suite.jpg',
-    alt: 'Terracotta suite with warm earth tones and artistic touches',
-    caption: 'The terracotta suite featuring warm earth tones and curated artwork',
-    category: 'bedroom',
-    aspectRatio: 'portrait'
   },
   {
     id: 'main-living-room',

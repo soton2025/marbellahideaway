@@ -4,7 +4,7 @@ export const seasonalPricing: SeasonalPricing[] = [
   {
     season: 'low',
     label: 'Low Season',
-    basePrice: 1200,
+    basePrice: 450,
     color: '#6B7A5A', // olive
     months: [1, 2, 11, 12], // Jan, Feb, Nov, Dec
     description: 'Peaceful winter months with mild Mediterranean weather'
@@ -12,7 +12,7 @@ export const seasonalPricing: SeasonalPricing[] = [
   {
     season: 'mid',
     label: 'Mid Season',
-    basePrice: 1800,
+    basePrice: 650,
     color: '#4A9B8E', // lagoon-teal
     months: [3, 4, 5, 10], // Mar, Apr, May, Oct
     description: 'Perfect weather for exploring Marbella and the Costa del Sol'
@@ -20,7 +20,7 @@ export const seasonalPricing: SeasonalPricing[] = [
   {
     season: 'high',
     label: 'High Season',
-    basePrice: 2500,
+    basePrice: 850,
     color: '#B85450', // terracotta
     months: [6, 9], // Jun, Sep
     description: 'Warm summer evenings and vibrant Marbella atmosphere'
@@ -28,7 +28,7 @@ export const seasonalPricing: SeasonalPricing[] = [
   {
     season: 'peak',
     label: 'Peak Season',
-    basePrice: 3200,
+    basePrice: 1200,
     color: '#D4716D', // terracotta-light
     months: [7, 8], // Jul, Aug
     description: 'Summer at its finest with maximum sunshine and energy'
