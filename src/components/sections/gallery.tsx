@@ -486,6 +486,22 @@ export function Gallery({ showInstagramContent = true }: GalleryProps) {
                 src={item.src}
                 alt={item.alt}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.innerHTML = `
+                      <div class="w-full h-full bg-orange-100 flex items-center justify-center text-orange-600">
+                        <div class="text-center">
+                          <div class="text-2xl mb-2">🏖️</div>
+                          <div class="text-sm font-medium">Villa Image</div>
+                          <div class="text-xs opacity-70">Loading...</div>
+                        </div>
+                      </div>
+                    `;
+                  }
+                }}
               />
               
               {/* Overlay */}

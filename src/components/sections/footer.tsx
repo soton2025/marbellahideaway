@@ -13,13 +13,13 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-charcoal text-white py-16">
+    <footer className="bg-stone-800 text-white py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <h3 className="text-3xl font-canela mb-4">Marbella Hideaway</h3>
-            <p className="text-warm-white/80 mb-6 leading-relaxed max-w-md">
+            <p className="text-white/80 mb-6 leading-relaxed max-w-md">
               Marbella&apos;s most private hideaway. A luxury 6-bedroom villa with lagoon pool 
               in the heart of the Golden Mile, where serenity meets sophistication.
             </p>
@@ -44,7 +44,7 @@ export function Footer() {
               </a>
               <button
                 onClick={handleWhatsAppClick}
-                className="bg-terracotta hover:bg-terracotta-dark rounded-full p-3 transition-colors group"
+                className="bg-orange-600 hover:bg-orange-700 rounded-full p-3 transition-colors group"
               >
                 <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </button>
@@ -56,22 +56,17 @@ export function Footer() {
             <h4 className="text-lg font-medium mb-4">Explore</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#bedrooms" className="text-warm-white/80 hover:text-white transition-colors">
-                  Bedrooms
-                </a>
-              </li>
-              <li>
-                <a href="#gallery" className="text-warm-white/80 hover:text-white transition-colors">
+                <a href="#gallery" className="text-white/80 hover:text-white transition-colors">
                   Gallery
                 </a>
               </li>
               <li>
-                <a href="#booking" className="text-warm-white/80 hover:text-white transition-colors">
+                <a href="#booking" className="text-white/80 hover:text-white transition-colors">
                   Availability
                 </a>
               </li>
               <li>
-                <a href="#reviews" className="text-warm-white/80 hover:text-white transition-colors">
+                <a href="#reviews" className="text-white/80 hover:text-white transition-colors">
                   Guest Reviews
                 </a>
               </li>
@@ -83,28 +78,28 @@ export function Footer() {
             <h4 className="text-lg font-medium mb-4">Contact</h4>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 mt-1 text-lagoon-teal flex-shrink-0" />
-                <span className="text-warm-white/80 text-sm">
+                <MapPin className="w-4 h-4 mt-1 text-orange-400 flex-shrink-0" />
+                <span className="text-white/80 text-sm">
                   Golden Mile<br />
                   Marbella, Spain 29602
                 </span>
               </div>
               
               <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-lagoon-teal flex-shrink-0" />
+                <Phone className="w-4 h-4 text-orange-400 flex-shrink-0" />
                 <a 
                   href="tel:+34600000000"
-                  className="text-warm-white/80 hover:text-white transition-colors text-sm"
+                  className="text-white/80 hover:text-white transition-colors text-sm"
                 >
                   +34 600 000 000
                 </a>
               </div>
               
               <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-lagoon-teal flex-shrink-0" />
+                <Mail className="w-4 h-4 text-orange-400 flex-shrink-0" />
                 <a 
                   href="mailto:hello@marbellahideaway.com"
-                  className="text-warm-white/80 hover:text-white transition-colors text-sm"
+                  className="text-white/80 hover:text-white transition-colors text-sm"
                 >
                   hello@marbellahideaway.com
                 </a>
@@ -118,44 +113,44 @@ export function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-2xl font-canela text-orange-400 mb-1">#1</div>
-              <div className="text-sm text-warm-white/80">Villa Rental</div>
+              <div className="text-sm text-white/80">Villa Rental</div>
             </div>
             <div>
               <div className="text-2xl font-canela text-orange-400 mb-1">74K</div>
-              <div className="text-sm text-warm-white/80">Instagram Followers</div>
+              <div className="text-sm text-white/80">Instagram Followers</div>
             </div>
             <div>
               <div className="text-2xl font-canela text-orange-400 mb-1">4.8★</div>
-              <div className="text-sm text-warm-white/80">Average Rating</div>
+              <div className="text-sm text-white/80">Average Rating</div>
             </div>
             <div>
               <div className="text-2xl font-canela text-orange-400 mb-1">47</div>
-              <div className="text-sm text-warm-white/80">Reviews</div>
+              <div className="text-sm text-white/80">Reviews</div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-warm-white/60 text-sm mb-4 md:mb-0">
+          <p className="text-white/60 text-sm mb-4 md:mb-0">
             © {currentYear} Marbella Hideaway. All rights reserved.
           </p>
           
           <div className="flex items-center space-x-6 text-sm">
-            <a href="/privacy" className="text-warm-white/60 hover:text-white transition-colors">
+            <a href="/privacy" className="text-white/60 hover:text-white transition-colors">
               Privacy Policy
             </a>
-            <a href="/terms" className="text-warm-white/60 hover:text-white transition-colors">
+            <a href="/terms" className="text-white/60 hover:text-white transition-colors">
               Terms of Service
             </a>
-            <span className="text-warm-white/40">•</span>
-            <span className="text-warm-white/60">
+            <span className="text-white/40">•</span>
+            <span className="text-white/60">
               Follow us: 
               <a 
                 href="https://instagram.com/marbellahideaway" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white hover:text-lagoon-teal transition-colors ml-1"
+                className="text-white hover:text-orange-400 transition-colors ml-1"
               >
                 @marbellahideaway
               </a>
