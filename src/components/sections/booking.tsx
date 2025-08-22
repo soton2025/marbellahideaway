@@ -16,7 +16,8 @@ import {
   ChefHat,
   Plane,
   Wine,
-  Anchor
+  Anchor,
+  Mail
 } from 'lucide-react'
 import { Calendar } from '@/components/ui/calendar'
 import { generateWhatsAppUrl, formatDate } from '@/lib/utils'
@@ -61,6 +62,30 @@ Could you please confirm availability and provide the final quote? Thank you!`
 
     window.open(generateWhatsAppUrl(message), '_blank')
     onWhatsAppInquiry?.(selectedStartDate, selectedEndDate, guestCount)
+  }
+
+  const handleEmailInquiry = () => {
+    if (!selectedStartDate || !selectedEndDate) {
+      setShowCalendar(true)
+      return
+    }
+
+    const priceEstimate = getPriceEstimate(selectedStartDate, selectedEndDate)
+    const subject = encodeURIComponent('Booking Inquiry - Marbella Hideaway')
+    const body = encodeURIComponent(`Hi! I'm interested in booking Marbella Hideaway:
+
+Check-in: ${formatDate(selectedStartDate)}
+Check-out: ${formatDate(selectedEndDate)}
+Guests: ${guestCount}
+Nights: ${priceEstimate.nights}
+
+Estimated price: ${formatPrice(priceEstimate.totalPrice)} (${priceEstimate.season.label})
+
+Could you please confirm availability and provide the final quote? Thank you!
+
+Best regards`)
+    
+    window.open(`mailto:?subject=${subject}&body=${body}`, '_blank')
   }
 
   const priceEstimate = selectedStartDate && selectedEndDate ? 
@@ -151,7 +176,7 @@ Could you please confirm availability and provide the final quote? Thank you!`
                       </button>
                       <span className="w-8 text-center font-medium">{guestCount}</span>
                       <button
-                        onClick={() => setGuestCount(Math.min(12, guestCount + 1))}
+                        onClick={() => setGuestCount(Math.min(15, guestCount + 1))}
                         className="w-8 h-8 rounded-full border border-sand hover:border-orange-600 flex items-center justify-center transition-colors"
                       >
                         +
@@ -185,16 +210,28 @@ Could you please confirm availability and provide the final quote? Thank you!`
                 </motion.div>
               )}
 
-              {/* WhatsApp CTA */}
-              <motion.button
-                onClick={handleWhatsAppInquiry}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-4 px-6 rounded-xl font-medium flex items-center justify-center space-x-2 transition-colors shadow-medium"
-              >
-                <MessageCircle className="w-5 h-5" />
-                <span>WhatsApp Inquiry</span>
-              </motion.button>
+              {/* Contact CTAs */}
+              <div className="space-y-3">
+                <motion.button
+                  onClick={handleWhatsAppInquiry}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-orange-600 hover:bg-orange-700 text-white py-4 px-6 rounded-xl font-medium flex items-center justify-center space-x-2 transition-colors shadow-medium"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  <span>WhatsApp Inquiry</span>
+                </motion.button>
+
+                <motion.button
+                  onClick={handleEmailInquiry}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-white hover:bg-gray-50 text-orange-600 border-2 border-orange-600 py-4 px-6 rounded-xl font-medium flex items-center justify-center space-x-2 transition-colors"
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>Email Inquiry</span>
+                </motion.button>
+              </div>
 
               <p className="text-xs text-warm-gray text-center mt-3">
                 Get instant response • No booking fees • Secure payment
@@ -314,7 +351,7 @@ Could you please confirm availability and provide the final quote? Thank you!`
                     <Users className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <div className="font-medium text-charcoal">Maximum Occupancy</div>
-                      <p className="text-sm text-warm-gray">12 guests maximum • Additional fees may apply</p>
+                      <p className="text-sm text-warm-gray">15 guests maximum • Additional fees may apply</p>
                     </div>
                   </div>
                   
